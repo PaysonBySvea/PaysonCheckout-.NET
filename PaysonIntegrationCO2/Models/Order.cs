@@ -17,6 +17,8 @@ namespace PaysonIntegrationCO2.Models
 
         public decimal TotalTaxAmount { get; set; }
 
+        public decimal TotalCreditedAmount { get; set; }
+
         public IList<Item> Items { get; set; }
 
         public Order()
