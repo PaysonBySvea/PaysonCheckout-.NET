@@ -12,7 +12,6 @@ namespace PaysonIntegrationCO2.Models.Enums
         Shipped = 6,
         PaidToAccount = 7,
         Canceled = 8,
-        Credited = 9,
         Expired = 10,
         Denied = 11
     }
