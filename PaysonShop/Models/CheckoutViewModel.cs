@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using PaysonIntegration.Models.Enums;
+using PaysonIntegrationCO2.Models.Enums;
 using PaysonShop.Business;
 
 namespace PaysonShop.Models

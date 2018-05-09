@@ -6,10 +6,9 @@ using System.Net;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Script.Serialization;
-using Newtonsoft.Json;
-using PaysonIntegration;
-using PaysonIntegration.Models;
-using PaysonIntegration.Models.Enums;
+using PaysonIntegrationCO2;
+using PaysonIntegrationCO2.Models;
+using PaysonIntegrationCO2.Models.Enums;
 using PaysonShop.Business;
 using PaysonShop.Business.Entities;
 using PaysonShop.Models;
@@ -77,8 +76,6 @@ namespace PaysonShop.Controllers
             try
             {
                 var apiCaller = new ApiCaller(model.MerchantId, model.ApiKey, true);
-                apiCaller.SetApiUrl(ConfigurationManager.AppSettings["PaysonRestUrl"]);
-
 
                 //Send the newly checkout data to Payson
                 var location = apiCaller.NewCheckout(model);
@@ -120,7 +117,6 @@ namespace PaysonShop.Controllers
             try
             {
                 var apiCaller = new ApiCaller(model.MerchantId, model.ApiKey, true);
-                apiCaller.SetApiUrl(ConfigurationManager.AppSettings["PaysonRestUrl"]);
 
                 //Send the newly checkout data to Payson
                 var data = apiCaller.Validate();

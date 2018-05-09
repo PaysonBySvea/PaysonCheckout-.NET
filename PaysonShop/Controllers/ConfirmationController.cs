@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 using System.Web.Mvc;
-using PaysonIntegration;
+using PaysonIntegrationCO2;
 using PaysonShop.Business;
 using PaysonShop.Models;
 
@@ -17,7 +17,6 @@ namespace PaysonShop.Controllers
             var paysonApiKey = ConfigurationManager.AppSettings["PaysonApiKey"];
 
             _apiCaller = new ApiCaller(paysonMerchantId, paysonApiKey, true);
-            _apiCaller.SetApiUrl(ConfigurationManager.AppSettings["PaysonRestUrl"]);
             _databaseConnection = new InMemoryDatabaseConnection();
         }
 

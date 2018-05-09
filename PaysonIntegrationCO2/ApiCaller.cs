@@ -3,7 +3,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
-using System.Configuration;
 using PaysonIntegrationCO2.Models;
 using PaysonIntegrationCO2.Models.Enums;
 
@@ -35,6 +34,8 @@ namespace PaysonIntegrationCO2
             AgentId = agentId;
             ApiKey = apiKey;
             ApiUrl = $"https://{(inTestMode ? "test-" : "")}api.payson.se/2.0/";
+
+            ServicePointManager.SecurityProtocol = ServicePointManager.SecurityProtocol | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
         }
 
 

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
 using System.Web.Mvc;
-using PaysonIntegration;
-using PaysonIntegration.Models.Enums;
+using PaysonIntegrationCO2;
+using PaysonIntegrationCO2.Models.Enums;
 using PaysonShop.Business;
 using PaysonShop.Business.Entities;
 
@@ -22,7 +18,6 @@ namespace PaysonShop.Controllers
             var paysonApiKey = ConfigurationManager.AppSettings["PaysonApiKey"];
 
             _apiCaller = new ApiCaller(paysonMerchantId, paysonApiKey, true);
-            _apiCaller.SetApiUrl(ConfigurationManager.AppSettings["PaysonRestUrl"]);
             _databaseConnection = new InMemoryDatabaseConnection();
         }
 
@@ -49,9 +44,6 @@ namespace PaysonShop.Controllers
                 case CheckoutStatus.Canceled:
                 case CheckoutStatus.Expired:
                     cart.Status = CartStatus.Shipped;
-                    break;
-                case CheckoutStatus.Credited:
-                    cart.Status = CartStatus.Credited;
                     break;
             }
 

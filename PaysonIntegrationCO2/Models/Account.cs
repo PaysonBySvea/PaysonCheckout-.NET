@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PaysonIntegrationCO2.Models
+﻿namespace PaysonIntegrationCO2.Models
 {
     public class Account
     { 

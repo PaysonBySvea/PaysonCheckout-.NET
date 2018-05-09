@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Linq;
 using System.Web.Mvc;
-using PaysonIntegration;
-using PaysonIntegration.Models;
-using PaysonIntegration.Models.Enums;
+using PaysonIntegrationCO2;
+using PaysonIntegrationCO2.Models;
 using PaysonShop.Business;
 using PaysonShop.Models;
 
@@ -22,7 +19,6 @@ namespace PaysonShop.Controllers
             var paysonApiKey = ConfigurationManager.AppSettings["PaysonApiKey"];
 
             _apiCaller = new ApiCaller(paysonMerchantId, paysonApiKey, true);
-            _apiCaller.SetApiUrl(ConfigurationManager.AppSettings["PaysonRestUrl"]);
             
             _databaseConnection = new InMemoryDatabaseConnection();
         }

@@ -163,12 +163,6 @@
     <Content Include="Views\Confirmation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PaysonIntegration\PaysonIntegration.csproj">
-      <Project>{17cee633-c6c8-48f6-b8e3-39471587a617}</Project>
-      <Name>PaysonIntegration</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Terms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -177,9 +171,13 @@
   <ItemGroup>
     <Content Include="Views\Shop\Response.cshtml" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\PaysonIntegrationCO2\PaysonIntegrationCO2.csproj">
+      <Project>{17cee633-c6c8-48f6-b8e3-39471587a617}</Project>
+      <Name>PaysonIntegrationCO2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
-    
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
@@ -207,11 +205,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-
 </Project>

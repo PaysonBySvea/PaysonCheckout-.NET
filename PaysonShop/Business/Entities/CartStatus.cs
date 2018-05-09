@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-
-namespace PaysonShop.Business.Entities
+﻿namespace PaysonShop.Business.Entities
 {
     public enum CartStatus
     {
         Created,
         Paid,
-        Shipped,
-        Canceled,
-        Credited
+        Shipped
     }
 }

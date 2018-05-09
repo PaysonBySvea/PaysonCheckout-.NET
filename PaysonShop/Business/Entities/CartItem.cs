@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace PaysonShop.Business.Entities
+﻿namespace PaysonShop.Business.Entities
 {
     public class CartItem
     {
